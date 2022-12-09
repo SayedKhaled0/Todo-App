@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 import '../modules/settings/settings.dart';
 import '../modules/tashslist/tasks list.dart';
+import '../providers/my provider.dart';
+import '../shared/styles/MyTheme.dart';
 
-class HomeLayout extends StatelessWidget {
+class HomeLayout extends StatefulWidget {
   static const String routeName = "home";
+
+  @override
+  State<HomeLayout> createState() => _HomeLayoutState();
+}
+
+class _HomeLayoutState extends State<HomeLayout> {
   int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
@@ -27,14 +38,13 @@ class HomeLayout extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         notchMargin: 10,
         shape: CircularNotchedRectangle(),
-        color: Colors.transparent,
         child: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           currentIndex: currentIndex,
           onTap: (index) {
             currentIndex = index;
-            //اعمل هنا provider
+            setState(() {});
           },
           items: [
             BottomNavigationBarItem(
@@ -42,13 +52,19 @@ class HomeLayout extends StatelessWidget {
                   Icons.list,
                   size: 30,
                 ),
-                label: ""),
+                label: AppLocalizations.of(context)!.taskslist,
+                backgroundColor: provider.mode == ThemeMode.light
+                    ? MyThemeData.primeycolor
+                    : MyThemeData.darkprimery),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.settings,
                   size: 30,
                 ),
-                label: ""),
+                label: AppLocalizations.of(context)!.settings,
+                backgroundColor: provider.mode == ThemeMode.light
+                    ? MyThemeData.primeycolor
+                    : MyThemeData.darkprimery),
           ],
         ),
       ),
@@ -56,5 +72,8 @@ class HomeLayout extends StatelessWidget {
     );
   }
 
-  List<Widget> tabs = [SettingsTap(), TasksTap()];
+  List<Widget> tabs = [
+    TasksTap(),
+    SettingsTap(),
+  ];
 }

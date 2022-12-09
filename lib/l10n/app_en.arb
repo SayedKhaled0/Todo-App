@@ -1,0 +1,13 @@
+{
+
+
+  "language": "Language",
+     "english": "English",
+    "arabic": "Arabic",
+     "mode": "Mode",
+     "dark": "Dark",
+     "light": "Light",
+     "taskslist": " Taskslist",
+  "settings": "Settings"
+
+}

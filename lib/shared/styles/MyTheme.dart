@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
 
 class MyThemeData {
+  static const Color colorgreen = Color.fromRGBO(97, 231, 87, 1.0);
+  static const Color primeycolor = Color.fromRGBO(93, 156, 236, 1.0);
+  static const Color darkprimery = Color.fromRGBO(6, 14, 30, 1.0);
+  static const Color back = Color.fromRGBO(223, 236, 219, 1.0);
+  static const Color colorblack = Color.fromRGBO(54, 54, 54, 1.0);
   static ThemeData light = ThemeData(
       primaryColor: primeycolor,
       scaffoldBackgroundColor: back,
@@ -30,7 +34,7 @@ class MyThemeData {
             fontSize: 20, fontWeight: FontWeight.bold, color: colorgreen),
       ),
       floatingActionButtonTheme:
-          FloatingActionButtonThemeData(backgroundColor: primeycolor),
+      FloatingActionButtonThemeData(backgroundColor: primeycolor),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.grey,
@@ -38,31 +42,33 @@ class MyThemeData {
       ));
 
   static ThemeData Dark = ThemeData(
-      primaryColor: primeycolor,
-      scaffoldBackgroundColor: back,
+      primaryColor: darkprimery,
+      scaffoldBackgroundColor: darkprimery,
       colorScheme: ColorScheme(
-          brightness: Brightness.light,
-          primary: primeycolor,
+          brightness: Brightness.dark,
+          primary: darkprimery,
           onPrimary: Colors.white,
           secondary: colorgreen,
           onSecondary: Colors.white,
           error: Colors.red,
           onError: Colors.white,
           background: back,
-          onBackground: primeycolor,
+          onBackground: darkprimery,
           surface: Colors.grey,
           onSurface: Colors.white),
       appBarTheme: AppBarTheme(
           backgroundColor: primeycolor,
-          iconTheme: IconThemeData(color: Colors.white)),
+          iconTheme: IconThemeData(color: Colors.black)),
       textTheme: TextTheme(
         headline1: TextStyle(
             fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
         subtitle1: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.bold, color: primeycolor),
+            fontSize: 20, fontWeight: FontWeight.bold, color: darkprimery),
         subtitle2: TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: colorgreen),
       ),
+      floatingActionButtonTheme:
+          FloatingActionButtonThemeData(backgroundColor: primeycolor),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.grey,
