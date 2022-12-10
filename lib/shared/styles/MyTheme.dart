@@ -65,7 +65,7 @@ class MyThemeData {
         subtitle1: TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: darkprimery),
         subtitle2: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.bold, color: colorgreen),
+            fontSize: 15, fontWeight: FontWeight.bold, color: colorgreen),
       ),
       floatingActionButtonTheme:
           FloatingActionButtonThemeData(backgroundColor: primeycolor),

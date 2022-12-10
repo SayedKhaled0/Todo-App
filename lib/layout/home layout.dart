@@ -53,7 +53,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                   size: 30,
                 ),
                 label: AppLocalizations.of(context)!.taskslist,
-                backgroundColor: provider.mode == ThemeMode.light
+                backgroundColor: provider.dropdownvalue2 == ThemeMode.light
                     ? MyThemeData.primeycolor
                     : MyThemeData.darkprimery),
             BottomNavigationBarItem(
@@ -62,7 +62,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                   size: 30,
                 ),
                 label: AppLocalizations.of(context)!.settings,
-                backgroundColor: provider.mode == ThemeMode.light
+                backgroundColor: provider.dropdownvalue2 == ThemeMode.light
                     ? MyThemeData.primeycolor
                     : MyThemeData.darkprimery),
           ],

@@ -29,13 +29,13 @@ class MyApp extends StatelessWidget {
         Locale('en'),
         Locale('ar'),
       ],
-      locale: Locale(provider.languageCode),
+      locale: Locale(provider.dropdownvalue),
       initialRoute: HomeLayout.routeName,
       routes: {HomeLayout.routeName: (_) => HomeLayout()},
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.light,
       darkTheme: MyThemeData.Dark,
-      themeMode: provider.mode,
+      themeMode: provider.dropdownvalue2,
     );
   }
 }
