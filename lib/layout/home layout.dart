@@ -6,6 +6,7 @@ import '../modules/settings/settings.dart';
 import '../modules/tashslist/tasks list.dart';
 import '../providers/my provider.dart';
 import '../shared/styles/MyTheme.dart';
+import 'AddTaskBottomSheet.dart';
 
 class HomeLayout extends StatefulWidget {
   static const String routeName = "home";
@@ -32,7 +33,9 @@ class _HomeLayoutState extends State<HomeLayout> {
           color: Colors.white,
           width: 4,
         )),
-        onPressed: () {},
+        onPressed: () {
+          showAddTaskBottomSheet();
+        },
         child: Icon(Icons.add),
       ),
       bottomNavigationBar: BottomAppBar(
@@ -70,6 +73,11 @@ class _HomeLayoutState extends State<HomeLayout> {
       ),
       body: tabs[currentIndex],
     );
+  }
+
+  void showAddTaskBottomSheet() {
+    showModalBottomSheet(
+        context: context, builder: (context) => AddTaskBottomSheet());
   }
 
   List<Widget> tabs = [

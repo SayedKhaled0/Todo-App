@@ -21,7 +21,7 @@ class MyThemeData {
           background: back,
           onBackground: primeycolor,
           surface: Colors.grey,
-          onSurface: Colors.white),
+          onSurface: Colors.black),
       appBarTheme: AppBarTheme(
           backgroundColor: primeycolor,
           iconTheme: IconThemeData(color: Colors.white)),
@@ -63,7 +63,7 @@ class MyThemeData {
         headline1: TextStyle(
             fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
         subtitle1: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.bold, color: darkprimery),
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
         subtitle2: TextStyle(
             fontSize: 15, fontWeight: FontWeight.bold, color: colorgreen),
       ),
